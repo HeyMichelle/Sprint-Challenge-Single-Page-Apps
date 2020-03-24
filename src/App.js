@@ -1,12 +1,14 @@
 import React, { useState, useEffect } from "react";
-import Header from "./components/Header.js";
 import Axios from "axios";
-import WelcomePage from "./components/WelcomePage.js";
-import CharacterList from "./components/CharacterList.js";
-import styled from 'styled-components';
-import SearchForm from "./components/SearchForm";
 import { Link } from "react-router-dom";
 import { Route } from 'react-router-dom';
+
+import Header from "./components/Header.js";
+import WelcomePage from "./components/WelcomePage.js";
+import CharacterList from "./components/CharacterList.js";
+import SearchForm from "./components/SearchForm";
+
+import styled from 'styled-components';
 
 
 
@@ -41,10 +43,16 @@ export default function App() {
   width: 80%;
   display: flex;
   flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
+  justify-content: space-around;
+  align-content: center;
   font-size: 15px;
+  padding: 1%;
+  border-radius: 25px;
+  background: #ffffff;
+  box-shadow: inset 5px 5px 10px #d6d6d6, 
+            inset -5px -5px 10px #ffffff;
   `
+  
 
   return (
     <main data-testid='app'>
@@ -53,8 +61,8 @@ export default function App() {
         <Link style={{textDecoration: 'none', color: 'Purple'}} to="/">Home</Link>
         <Link style={{textDecoration: 'none', color: 'Purple'}} to="/character-list">Character List</Link>
       </Navbar>
-      <SearchForm handleInput = {handleInput} />
       <Route exact path="/" component={WelcomePage} />
+      <SearchForm handleInput = {handleInput} />
       <Route path = "/character-list" component={CharacterList}><CharacterList forms={filtered} /></Route>
     </main>
   );
