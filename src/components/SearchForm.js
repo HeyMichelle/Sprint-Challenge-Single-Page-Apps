@@ -1,10 +1,10 @@
 import React, { useState } from "react";
+import {Field, Form, withFormik} from "formik";
 
-export default function SearchForm() {
- 
-  return (
-    <section className="search-form">
-     // Add a search form here
-    </section>
+const SearchForm = props => {
+  return(
+    <input onChange={props.handleInput} type="text" placeholder="Start *burrp* searching"/>
   );
 }
+
+export default SearchForm;
