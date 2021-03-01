@@ -9,9 +9,13 @@ main {
   min-height: 80vh;
   max-width: 1024px;
   margin: 35px auto;
-  background: #fff;
+  /* background: #fff; */
   padding: 15px;
-  box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22);
+  /* box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22); */
+  border-radius: 31px;
+  background: #ffffff;
+  box-shadow:  -12px 12px 43px #dbdbdb, 
+             12px -12px 43px #ffffff;
 }
 
 .grid-view {
